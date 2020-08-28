@@ -13,7 +13,7 @@ class Directory extends Component {
     }
 
     static navigationOptions = {
-        title:'Directory'
+        title:'Gallery'
     };
 
     render() {
