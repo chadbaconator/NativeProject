@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import Home from './HomeComponent';
 import Directory from './DirectoryComponent';
-import Photoinfo from './PhotoInfoComponent'
+import PhotoInfo from './PhotoInfoComponent';
 import { View, Platform } from 'react-native';
 import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
 
 const DirectoryNavigator = createStackNavigator(
     {
         Directory: { screen: Directory },
-        Photoinfo: { screen: Photoinfo }
+        PhotoInfo: { screen: PhotoInfo }
     }, 
     {
         initialRouteName: 'Directory',
@@ -56,7 +56,7 @@ class Main extends Component {
         return (
             <View style={{flex: 1, 
             paddingTop: Platform.OS === 'ios' ? 0 : Expo.Constants.statusBarHeight }}>
-                <DirectoryNavigator />
+                <MainNavigator />
             </View>
         );
     }
