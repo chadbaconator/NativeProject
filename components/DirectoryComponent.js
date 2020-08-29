@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { FlatList } from 'react-native';
-import { ListItem } from 'react-native-elements';
+import { Tile } from 'react-native-elements';
 import { PHOTOS } from '../shared/photos';
+import * as Animatable from 'react-native-animatable';
 
 
 class Directory extends Component {
@@ -20,11 +21,11 @@ class Directory extends Component {
         const { navigate } = this.props.navigation;
         const renderDirectoryItem = ({item}) => {
             return (
-                <ListItem
+                <Tile
                     title={item.name}
                     subtitle={item.description}
                     onPress={() => navigate('PhotoInfo', { photoId: item.id })}
-                    leftAvatar={{ source: require('./images/bw.jpg')}}
+                    imageSrc={{ source: require('./images/bw.jpg')}}
                 />
             );
         };
