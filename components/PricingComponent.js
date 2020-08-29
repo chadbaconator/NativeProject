@@ -11,29 +11,29 @@ class Pricing extends Component {
     render() {
         return(
             <ScrollView>
-                <PricingCard 
-                    color="#0CEDB1"
+                <PricingCard
+                    color="#5afcd1"
                     title="Free"
                     price="$0"
                     info={['Inquiry', 'Free Quote Service Not Seen']}
                     button={{title: 'Click Here', icon: 'camera'}}
                 />
                 <PricingCard 
-                    color="#230BE0"
+                    color="#e0fc55"
                     title="Headshots"
                     price="$150"
                     info={['5 Headshots', 'Editing included']}
                     button={{title: 'Click Here', icon: 'camera'}}
                 />
                 <PricingCard 
-                    color="#ff75e3"
+                    color="#FC5B86"
                     title="Wedding's"
                     price="$1000"
                     info={['~300 Photos', 'Editing included']}
                     button={{title: 'Click Here', icon: 'camera'}}
                 />
                 <PricingCard 
-                    color="#b30000"
+                    color="#815BFC"
                     title="Commerical Use"
                     price="$750"
                     info={['Advertising and Commerical use', 'Editing included']}
