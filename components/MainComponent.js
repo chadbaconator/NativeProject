@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Home from './HomeComponent';
 import Directory from './DirectoryComponent';
 import PhotoInfo from './PhotoInfoComponent';
+import About from './AboutComponent';
+import Pricing from './PricingComponent';
+import Contact from './ContactComponent';
 import { View, Platform } from 'react-native';
 import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
 
@@ -14,7 +17,7 @@ const DirectoryNavigator = createStackNavigator(
         initialRouteName: 'Directory',
         navigationOptions: {
             headerStyle: {
-                backgroundColor: '#5637DD'
+                backgroundColor: '#03627c'
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
@@ -31,7 +34,7 @@ const HomeNavigator = createStackNavigator(
     {
         navigationOptions: {
             headerStyle: {
-                backgroundColor: '#5637DD'
+                backgroundColor: '#03627c'
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
@@ -41,13 +44,68 @@ const HomeNavigator = createStackNavigator(
     }
 );
 
+const PricingNavigator = createStackNavigator(
+    {
+        Pricing: { screen: Pricing }
+    },
+    {
+        navigationOptions: {
+            headerStyle: {
+                backgroundColor: '#03627c'
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+                color: '#fff'
+            }
+        }
+    }
+);
+
+const AboutNavigator = createStackNavigator(
+    {
+        About: { screen: About }
+    },
+    {
+        navigationOptions: {
+            headerStyle: {
+                backgroundColor: '#03627c'
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+                color: '#fff'
+            }
+        }
+    }
+);
+
+const ContactNavigator = createStackNavigator(
+    {
+        Contact: { screen: Contact }
+    },
+    {
+        navigationOptions: {
+            headerStyle: {
+                backgroundColor: '#03627c'
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+                color: '#fff'
+            }
+        }
+    }
+);
+
+
 const MainNavigator = createDrawerNavigator(
     {
         Home: { screen: HomeNavigator },
-        Directory: { screen: DirectoryNavigator }
+        Directory: { screen: DirectoryNavigator },
+        Pricing: { screen: PricingNavigator },
+        About: { screen: AboutNavigator },
+        Contact: { screen: ContactNavigator }
     },
     {
-        drawerBackgroundColor: '#CEC8FF'
+        drawerBackgroundColor: '#b2cfd7'
     }
 );
 
